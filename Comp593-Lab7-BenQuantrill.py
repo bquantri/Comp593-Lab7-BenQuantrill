@@ -1,8 +1,18 @@
-
+#-----------------------------------------
+# File: Comp593-Lab7-BenQuantrill.py
+# Author: Ben Quantrill
+# Date: 2022/04/06
+# Course: Comp593 -  Scripting Applications
+# Description: A python script using Complex
+#              Data Structures to output text
+# Usage: Comp593-Lab7-BenQuantrill.py
+# History: 2022/04/06 (date created)
+#
 
 
 def main():
     
+    #complex data structure
     info_data = {
         'name': "Ben",
         'student_id': 10180039,
@@ -21,24 +31,28 @@ def main():
         ],
     }
 
+    #Adds a new movie to the movies dictionary in the data structure
     new_movie =  {'title': "Robocop", 'genre': "Action"}
     info_data['movies'].append(new_movie)
 
+    #Adds to extra toppings to the pizza toppings dictionayr
     more_toppings = ("sausage", "extra cheese")
     add_more_toppings(info_data, more_toppings)
 
+    #print the required sentences set up in the function
     print_my_info(info_data)
 
-    pass
 
 def add_more_toppings(info_data, more_toppings):
 
+    #adds new pizza toppings and sorts alphabetically
     for t in more_toppings:
         info_data['pizza_toppings'].append(t)
         info_data['pizza_toppings'].sort()
 
 def print_my_info(info_data):
 
+    #print statements with for loops to iterate through the data sets and add punctuation
     print("Hi Jeremy, my name is", info_data['name'], "and my student ID is", info_data['student_id'],end=".\n")
 
     print("My ideal pizza has ", end='')
